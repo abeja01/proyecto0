@@ -1,0 +1,25 @@
+<section class="testimonial-section" *ngIf="data">
+  <div class="container">
+    <div class="testimonial-content">
+      <mat-icon style="font-size: 48px; width: 48px; height: 48px; color: var(--accent-color); margin-bottom: 20px;">format_quote</mat-icon>
+      <p class="testimonial-text">"{{ data.text }}"</p>
+      <div class="testimonial-author">
+        <img [src]="data.image" [alt]="data.author">
+        <div>
+          <strong>{{ data.author }}</strong><br>
+          <small>{{ data.role }}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta" style="text-align: center; background: var(--secondary-color);">
+  <div class="container">
+    <h2>Ready to Build Your Dream Home?</h2>
+    <p style="margin-bottom: 30px; color: var(--text-light);">Contact us today for a private consultation.</p>
+    <button mat-flat-button color="primary" class="btn-dark-mat">
+      Get in Touch <mat-icon style="margin-left: 8px;">alternate_email</mat-icon>
+    </button>
+  </div>
+</section>

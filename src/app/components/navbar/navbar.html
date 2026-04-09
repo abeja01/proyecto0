@@ -1,0 +1,11 @@
+<nav>
+  <div class="logo">BESPOKE</div>
+  <div class="nav-links">
+    @for (item of items; track item.label) {
+      <a [href]="item.link">{{ item.label }}</a>
+    }
+  </div>
+  <button mat-flat-button class="nav-btn-mat">
+    Let's Connect <mat-icon style="margin-left: 8px;">arrow_forward</mat-icon>
+  </button>
+</nav>

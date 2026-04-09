@@ -1,0 +1,31 @@
+<section id="services">
+  <div class="container">
+    <div class="features-top">
+      <div class="features-content">
+        <small class="heading" style="color: var(--accent-color); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em;">Our Philosophy</small>
+        <h2>We Build More Than Homes – We Build Legacies</h2>
+        <p>A Bespoke Home Builder, we believe that your home should be a reflection of your unique journey. We combine timeless architecture with modern innovation to create spaces that inspire and endure for generations.</p>
+        <button mat-flat-button color="primary" class="btn-dark-mat">
+          Learn More <mat-icon style="margin-left: 8px;">arrow_forward</mat-icon>
+        </button>
+      </div>
+      <div class="features-main-image">
+        <img src="/modern_forest_house_1774275743816.png" alt="Modern Forest House">
+      </div>
+    </div>
+    
+    <div class="philosophy-cards">
+      @for (card of philosophyCards; track card.title) {
+        <div class="p-card">
+          <div class="p-icon">
+            <mat-icon>{{ card.icon }}</mat-icon>
+          </div>
+          <div class="p-info">
+            <h4>{{ card.title }}</h4>
+            <p>{{ card.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

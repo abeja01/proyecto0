@@ -1,0 +1,16 @@
+<section id="gallery" class="gallery">
+  <div class="container">
+    <h2>Discover Our Signature Homes</h2>
+    <div class="gallery-grid">
+      @for (home of items; track home.title) {
+        <div class="gallery-item">
+          <img [src]="home.image" [alt]="home.title">
+          <div class="gallery-overlay">
+            <h3>{{ home.title }}</h3>
+            <a href="#" style="color: var(--white); text-decoration: none; font-size: 0.8rem;">Explore Details →</a>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

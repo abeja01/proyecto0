@@ -1,0 +1,27 @@
+<section id="approach" class="approach">
+  <div class="container">
+    <div class="approach-inner">
+      <div class="approach-image">
+        <img src="/luxury_exterior_2_1774276449034.png" alt="Luxury House Approach">
+      </div>
+      <div class="approach-content">
+        <small class="heading" style="color: var(--accent-color); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em;">Tailored Experience</small>
+        <h2>Our Tailored Approach to Home Building</h2>
+        
+        <div class="approach-list">
+          @for (step of steps; track step.title) {
+            <div class="approach-item" [class.active]="activeIndex === $index" (click)="setActive($index)">
+              <div class="item-header">
+                <h3>{{ step.title }}</h3>
+                <mat-icon>{{ activeIndex === $index ? 'remove_circle_outline' : 'add_circle_outline' }}</mat-icon>
+              </div>
+              <div class="item-body" *ngIf="activeIndex === $index">
+                <p>{{ step.description }}</p>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

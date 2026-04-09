@@ -1,0 +1,89 @@
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.approach-inner {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.approach-image {
+  flex: 1;
+}
+
+.approach-image img {
+  width: 100%;
+  border-radius: 40px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+}
+
+.approach-content {
+  flex: 1;
+}
+
+.approach-content h2 {
+  font-size: 3rem;
+  margin: 20px 0 40px;
+  line-height: 1.1;
+  font-family: var(--font-heading);
+}
+
+.approach-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.approach-item {
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #333;
+}
+
+.item-header span {
+  color: #999;
+}
+
+.approach-item.active .item-header h3 {
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.item-body {
+  margin-top: 15px;
+  padding-right: 40px;
+}
+
+.item-body p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .approach-inner {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+}
